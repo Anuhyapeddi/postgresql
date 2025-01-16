@@ -52,7 +52,7 @@ To know the description of the table
 ```sql
 \d table_name
 ```
-update the column in a table
+Update the column in a table
 
 ```sql
 
@@ -65,5 +65,48 @@ where unique_indentifier=6;
 update product
 set color='pink'
 where id=6;
+
+```
+Delete a row from a table
+
+```sql
+
+delete from table_name
+where unique_identifier = 8;
+
+-- example
+
+delete from product
+where id = 8;
+```
+
+Where and Between clause
+
+```sql
+
+-- here product is table name and variable after where clause is column name
+
+select * from product
+where price < 20;
+
+select * from product 
+where price between 50 and 100;
+
+select * from product
+where category = 'hoodie'
+
+select * from product where size = 'M';
+
+select category, name from product
+where clearance = true;
+
+```
+in clause
+
+```sql
+
+-- need to be more specific about the values
+
+select * from product where price in (29.99, 129.99);
 
 ```
